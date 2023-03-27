@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
 </head>
 <body>
-$END$
+<div class="container">
+    <h1>Pokedexliste</h1>
+    <a href="/create" th:href="@{create}">Tilføj ny pokemon</a>
+    <table>
+        <thead>
+            <th></th>
+            <th>Pokedex_number</th>
+            <th>Name</th>
+            <th>Speed</th>
+            <th>Special_defence</th>
+            <th>Special_attack</th>
+            <th>Defence</th>
+            <th>Attack</th>
+            <th>HP</th>
+            <th>Primary_type</th>
+            <th>Secondary_type</th>
+            <th>Update pokemon</th>
+            <th>Slet pokemon</th>
+        </thead>
+        <tbody>
+        <tr th:each="pokedex : ${pokedex}">
+            <td><img th:src="@{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+                     + ${pokedex.pokedex_number} + '.png'}">
+            </td>
+            <td th:text="${pokedex.pokedex_number}">
+            </td>
+            <td th:text="${pokedex.name}">
+            </td>
+            <td th:text="${pokedex.speed}">
+            </td>
+            <td th:text="${pokedex.special_defence}">
+            </td>
+            <td th:text="${pokedex.special_attack}">
+            </td>
+            <td th:text="${pokedex.defence}">
+            </td>
+            <td th:text="${pokedex.attack}">
+            </td>
+            <td th:text="${pokedex.hp}">
+            </td>
+            <td th:text="${pokedex.primary_type}">
+            </td>
+            <td th:text="${pokedex.secondary_type}">
+            </td>
+            <td><a href="/update" th:href="@{'/update/' + ${pokedex.pokedex_number}}">Opdater</a>
+            </td>
+            <td><a href="/delete" th:href="@{'/delete/' + ${pokedex.pokedex_number}}">Slet</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 </body>
 </html>

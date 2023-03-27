@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj ny pokemon</title>
+</head>
+<body>
+  <div>
+    <h1>Her kan du tilføje ny pokemon</h1>
+    <form action="create" method="post">
+      <label for="pokedex_number">Pokemon number</label>
+      <input id="pokedex_number" name="pokedex_number" type="number">
+
+      <label for="name-field">Pokemon Name</label>
+      <input id="name-field" name="name-field" type="text">
+
+      <label for="speed">Speed</label>
+      <input id="speed" name="speed" type="number">
+
+      <label for="special_defence">Special defence</label>
+      <input id="special_defence" name="special_defence" type="number">
+
+      <label for="special_attack">Special attack</label>
+      <input id="special_attack" name="special_attack" type="number">
+
+      <label for="defence">Defence</label>
+      <input id="defence" name="defence" type="number">
+
+      <label for="attack">Attack</label>
+      <input id="attack" name="attack" type="number">
+
+      <label for="hp">Health points</label>
+      <input id="hp" name="hp" type="number">
+
+      <label for="primary_type">Primary type</label>
+      <input id="primary_type" name="primary_type" type="text">
+
+      <label for="secondary_type">Secondary type</label>
+      <input id="secondary_type" name="secondary_type" type="text">
+
+      <input type="submit" value="Add pokemon">
+    </form>
+  </div>
+</body>
+</html>
