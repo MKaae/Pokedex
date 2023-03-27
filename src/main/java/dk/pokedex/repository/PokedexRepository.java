@@ -10,9 +10,6 @@ import java.util.List;
 
 @Repository
 public class PokedexRepository {
-    //private final static String DB_URL = "jdbc:mysql://mhkmysql.mysql.database.azure.com:3306/pokedex";
-    //private final static String UID = "MKaae";
-    //private static String PWD = "25cjYcyOoz1ifa";
 
     //Database properties injected from application.properties
     @Value("${spring.datasource.url}")
