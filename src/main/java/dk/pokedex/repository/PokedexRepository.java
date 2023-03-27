@@ -10,7 +10,6 @@ import java.util.List;
 
 @Repository
 public class PokedexRepository {
-
     //Database properties injected from application.properties
     @Value("${spring.datasource.url}")
     private String DB_URL;
